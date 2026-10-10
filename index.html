@@ -6,18 +6,19 @@
   <title>Damini Beauty Salon | Luxury Salon & Spa Jalandhar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --bg: #0b090a;
-      --card-bg: #161214;
-      --rose-gold: #e2a898;
-      --rose-glow: #f4c2b5;
-      --gold-accent: #d4af37;
-      --text-white: #fdfaf6;
-      --text-muted: #bda8a3;
-      --border-color: rgba(226, 168, 152, 0.2);
+      --bg: #0d0b0d;
+      --card-bg: #181417;
+      --rose-gold: #f3b0a0;
+      --rose-bright: #ffd4cb;
+      --gold: #f5b041;
+      --text-white: #ffffff;
+      --text-sub: #f0e6e4;
+      --text-muted: #d1c2be;
+      --border-color: rgba(243, 176, 160, 0.25);
     }
     * {
       margin: 0;
@@ -30,17 +31,17 @@
       color: var(--text-white);
       font-family: 'Montserrat', sans-serif;
       overflow-x: hidden;
-      padding-bottom: 70px;
+      padding-bottom: 75px;
     }
     h1, h2, h3, .font-serif {
       font-family: 'Cormorant Garamond', serif;
     }
-    
-    /* Top Bar */
+
+    /* Top Announcement Bar */
     .top-bar {
-      background: rgba(11, 9, 10, 0.95);
+      background: #080608;
       border-bottom: 1px solid var(--border-color);
-      padding: 10px 20px;
+      padding: 12px 20px;
       font-size: 13px;
       display: flex;
       justify-content: space-between;
@@ -48,15 +49,19 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(10px);
+      font-weight: 500;
+    }
+    .top-bar i {
+      color: var(--rose-gold);
+      margin-right: 6px;
     }
     .top-bar a {
-      color: var(--rose-gold);
+      color: var(--rose-bright);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    /* Hero Section */
+    /* Hero Section with High Contrast Dark Overlay */
     .hero {
       position: relative;
       min-height: 85vh;
@@ -65,39 +70,46 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px 20px;
-      background: radial-gradient(circle at center, rgba(226, 168, 152, 0.15) 0%, rgba(11, 9, 10, 0.95) 75%),
+      padding: 60px 20px;
+      background: linear-gradient(180deg, rgba(13, 11, 13, 0.88) 0%, rgba(13, 11, 13, 0.94) 100%),
                   url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     }
     .badge-rating {
-      background: rgba(22, 18, 20, 0.85);
+      background: rgba(0, 0, 0, 0.75);
       border: 1px solid var(--rose-gold);
-      padding: 8px 18px;
+      padding: 8px 20px;
       border-radius: 50px;
       font-size: 14px;
-      color: var(--rose-glow);
+      font-weight: 600;
+      color: #fff;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
     .hero h1 {
-      font-size: 3.5rem;
+      font-size: 3.6rem;
       letter-spacing: 2px;
-      color: #fff;
-      margin-bottom: 15px;
+      color: #ffffff;
+      margin-bottom: 18px;
       text-transform: uppercase;
+      font-weight: 700;
+      text-shadow: 0 3px 20px rgba(0, 0, 0, 0.8);
+      line-height: 1.15;
     }
     .hero h1 span {
       color: var(--rose-gold);
       font-style: italic;
     }
     .hero p {
-      max-width: 650px;
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 30px;
+      max-width: 680px;
+      font-size: 1.15rem;
+      color: var(--text-sub);
+      font-weight: 500;
+      line-height: 1.7;
+      margin-bottom: 35px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
     }
     .hero-btn-group {
       display: flex;
@@ -106,11 +118,11 @@
       justify-content: center;
     }
     .btn-primary {
-      background: linear-gradient(135deg, var(--rose-gold), #b87363);
-      color: #120a09;
-      font-weight: 700;
-      padding: 14px 28px;
-      border-radius: 4px;
+      background: linear-gradient(135deg, var(--rose-gold), #c97d6d);
+      color: #120907;
+      font-weight: 800;
+      padding: 15px 32px;
+      border-radius: 6px;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
@@ -118,26 +130,34 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       font-size: 13px;
-      box-shadow: 0 4px 20px rgba(226, 168, 152, 0.3);
+      box-shadow: 0 5px 25px rgba(243, 176, 160, 0.35);
+      transition: 0.3s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
     }
     .btn-secondary {
-      background: transparent;
-      border: 1px solid var(--rose-gold);
-      color: var(--rose-gold);
-      padding: 14px 28px;
-      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1.5px solid var(--rose-gold);
+      color: #ffffff;
+      padding: 15px 32px;
+      border-radius: 6px;
       text-decoration: none;
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-weight: 600;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+    .btn-secondary:hover {
+      background: rgba(243, 176, 160, 0.15);
     }
 
-    /* Section Titles */
+    /* Common Section Wrap */
     .section-wrap {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 70px 20px;
+      padding: 75px 20px;
     }
     .sec-header {
       text-align: center;
@@ -150,50 +170,53 @@
       color: var(--rose-gold);
       display: block;
       margin-bottom: 8px;
+      font-weight: 700;
     }
     .sec-header h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       letter-spacing: 1px;
+      color: #ffffff;
     }
 
-    /* Nails Showcase Section */
+    /* Nail Extensions Gallery */
     .nails-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      gap: 24px;
     }
     .nail-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
     .nail-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
       border-color: var(--rose-gold);
     }
     .nail-card img {
       width: 100%;
-      height: 320px;
+      height: 330px;
       object-fit: cover;
       display: block;
     }
     .nail-info {
-      padding: 18px;
+      padding: 20px;
       text-align: center;
     }
     .nail-info h4 {
-      font-size: 1.2rem;
-      color: var(--rose-glow);
-      margin-bottom: 5px;
+      font-size: 1.35rem;
+      color: var(--rose-bright);
+      margin-bottom: 6px;
     }
     .nail-info p {
-      font-size: 13px;
+      font-size: 13.5px;
       color: var(--text-muted);
+      line-height: 1.5;
     }
 
-    /* All 20+ Services Interactive Menu */
+    /* Detailed Catalog Menu */
     .service-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -201,407 +224,4 @@
     }
     .service-box {
       background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      padding: 25px;
-      border-radius: 8px;
-    }
-    .service-box h3 {
-      font-size: 1.6rem;
-      color: var(--rose-gold);
-      border-bottom: 1px dashed var(--border-color);
-      padding-bottom: 10px;
-      margin-bottom: 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .service-box h3 i {
-      font-size: 18px;
-    }
-    .srv-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      font-size: 14px;
-    }
-    .srv-item:last-child {
-      border-bottom: none;
-    }
-    .srv-name {
-      color: var(--text-white);
-      font-weight: 500;
-    }
-    .srv-badge {
-      font-size: 12px;
-      color: var(--rose-gold);
-      background: rgba(226, 168, 152, 0.1);
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
-
-    /* Reviews Section */
-    .review-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .review-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      padding: 25px;
-      border-radius: 8px;
-    }
-    .review-stars {
-      color: #ffb703;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    .review-text {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 15px;
-      font-style: italic;
-    }
-    .reviewer-name {
-      font-weight: 600;
-      font-size: 13px;
-      color: var(--rose-gold);
-    }
-
-    /* Location & Map Section */
-    .loc-card {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      overflow: hidden;
-      padding: 30px;
-    }
-    .loc-details h3 {
-      font-size: 2rem;
-      color: var(--rose-glow);
-      margin-bottom: 15px;
-    }
-    .loc-row {
-      display: flex;
-      gap: 15px;
-      align-items: flex-start;
-      margin-bottom: 20px;
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-    .loc-row i {
-      color: var(--rose-gold);
-      font-size: 18px;
-      margin-top: 3px;
-    }
-    .map-embed {
-      width: 100%;
-      height: 320px;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-    }
-
-    /* Bottom Sticky Action Bar */
-    .sticky-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: #110d0f;
-      border-top: 1px solid var(--border-color);
-      display: flex;
-      z-index: 999;
-    }
-    .sticky-btn {
-      flex: 1;
-      padding: 14px 0;
-      text-align: center;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .sticky-call {
-      background: #1e1719;
-      color: var(--rose-gold);
-      border-right: 1px solid var(--border-color);
-    }
-    .sticky-wa {
-      background: #25d366;
-      color: #fff;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.5rem; }
-      .section-wrap { padding: 40px 15px; }
-      .loc-card { padding: 20px; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Top Announcement Bar -->
-  <div class="top-bar">
-    <div><i class="fa-solid fa-location-dot"></i> Gurjaipal Nagar, Cool Road, Jalandhar</div>
-    <div><a href="tel:9815611582"><i class="fa-solid fa-phone"></i> +91 98156 11582</a></div>
-  </div>
-
-  <!-- Hero Banner -->
-  <section class="hero">
-    <div class="badge-rating">
-      <i class="fa-solid fa-star" style="color:#ffb703;"></i> 4.8 Rating Over 1,000+ Happy Clients
-    </div>
-    <h1>Damini <span>Beauty Salon</span></h1>
-    <p>Exclusive bridal couture, designer nail extensions, skin aesthetics, and revitalizing spa experiences tailored for discerning women in Jalandhar.</p>
-    <div class="hero-btn-group">
-      <a href="https://wa.me/919815611582?text=Hello%20Damini%20Beauty%20Salon,%20I%20want%20to%20book%20an%20appointment." class="btn-primary" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> Book On WhatsApp
-      </a>
-      <a href="#services" class="btn-secondary">View Menu & Rates</a>
-    </div>
-  </section>
-
-  <!-- Nails Art & Extensions Showcase (Using Your Provided Photos) -->
-  <section class="section-wrap" id="nails">
-    <div class="sec-header">
-      <span>Exclusive Gallery</span>
-      <h2>Designer Nail Extensions & Art</h2>
-    </div>
-    <div class="nails-grid">
-      <div class="nail-card">
-        <img src="https://i.ibb.co/2775Z8Cz/unnamed-1.webp" alt="Damini Salon Nail Art 1">
-        <div class="nail-info">
-          <h4>Signature Acrylic Sculpting</h4>
-          <p>Custom chrome gloss finish with tailored length.</p>
-        </div>
-      </div>
-      <div class="nail-card">
-        <img src="https://i.ibb.co/xqg4nz48/unnamed.webp" alt="Damini Salon Nail Art 2">
-        <div class="nail-info">
-          <h4>Bridal French & Ombre</h4>
-          <p>Delicate rose blush tones with crystal detailing.</p>
-        </div>
-      </div>
-      <div class="nail-card">
-        <img src="https://i.ibb.co/G4tjvS8V/Screenshot-2026-10-10-14-55-27-509-com-android-chrome-edit.jpg" alt="Damini Salon Nail Extension 3">
-        <div class="nail-info">
-          <h4>Gel Overlay & Precision Art</h4>
-          <p>Long-lasting chip-free natural nail enhancement.</p>
-        </div>
-      </div>
-      <div class="nail-card">
-        <img src="https://i.ibb.co/7NgT4qK2/Screenshot-2026-10-10-14-54-23-576-com-android-chrome-edit.jpg" alt="Damini Salon Nail Extension 4">
-        <div class="nail-info">
-          <h4>Luxury Pastel & Nail Glam</h4>
-          <p>Intricate handmade detailing for special events.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- All 20+ Services Detailed Menu -->
-  <section class="section-wrap" id="services">
-    <div class="sec-header">
-      <span>Complete Catalog</span>
-      <h2>Signature Services & Aesthetics</h2>
-    </div>
-    <div class="service-grid">
-      
-      <!-- Hair & Styling -->
-      <div class="service-box">
-        <h3>Hair Artistry <i class="fa-solid fa-scissors"></i></h3>
-        <div class="srv-item">
-          <span class="srv-name">Designer Haircut & Styling</span>
-          <span class="srv-badge">Available</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Blow Dry & Volumizing</span>
-          <span class="srv-badge">Instant</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Luxury Hair Extensions</span>
-          <span class="srv-badge">Custom</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Shampoo & Deep Conditioning</span>
-          <span class="srv-badge">Available</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Keratin & Protein Spa Therapy</span>
-          <span class="srv-badge">Premium</span>
-        </div>
-      </div>
-
-      <!-- Make-Up & Bridal -->
-      <div class="service-box">
-        <h3>Bridal & Events <i class="fa-solid fa-crown"></i></h3>
-        <div class="srv-item">
-          <span class="srv-name">HD / Airbrush Bridal Make-up</span>
-          <span class="srv-badge">Specialist</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Wedding & Event Preparation</span>
-          <span class="srv-badge">Package</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Party & Reception Make-up</span>
-          <span class="srv-badge">Available</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Dramatic Eyelashes Setting</span>
-          <span class="srv-badge">Add-on</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Eyebrow Threading & Shaping</span>
-          <span class="srv-badge">Express</span>
-        </div>
-      </div>
-
-      <!-- Skin & Spa Services -->
-      <div class="service-box">
-        <h3>Skin & Rejuvenation <i class="fa-solid fa-spa"></i></h3>
-        <div class="srv-item">
-          <span class="srv-name">Medical & Glow Facials</span>
-          <span class="srv-badge">Radiance</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Full Body Waxing / Rica</span>
-          <span class="srv-badge">Smooth</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Aroma Body Massage & Spa</span>
-          <span class="srv-badge">Therapy</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Body Tanning & Polishing</span>
-          <span class="srv-badge">Flawless</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Advanced Skin Care Rituals</span>
-          <span class="srv-badge">Custom</span>
-        </div>
-      </div>
-
-      <!-- Hands & Feet Care -->
-      <div class="service-box">
-        <h3>Manicure & Pedicure <i class="fa-solid fa-hand-sparkles"></i></h3>
-        <div class="srv-item">
-          <span class="srv-name">Classic & Spa Manicure</span>
-          <span class="srv-badge">Deluxe</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Hydrating Rose Pedicure</span>
-          <span class="srv-badge">Deluxe</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Cuticle Care & Nail Buffing</span>
-          <span class="srv-badge">Essential</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">Online Beauty Salon Booking</span>
-          <span class="srv-badge">Instant</span>
-        </div>
-        <div class="srv-item">
-          <span class="srv-name">VIP Membership Salon Services</span>
-          <span class="srv-badge">Inquire</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Google Reviews -->
-  <section class="section-wrap">
-    <div class="sec-header">
-      <span>Verified Feedback</span>
-      <h2>What Jalandhar Says About Us</h2>
-    </div>
-    <div class="review-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Best nail extension service in Cool Road! Got my bridal nails done from Damini Salon and they stayed immaculate for more than 4 weeks. Highly recommended!"</p>
-        <span class="reviewer-name">— Simran Kaur (Jalandhar)</span>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"The facial and hair spa gave an instant natural glow. The ambience is clean, very hygienic and the staff is completely professional."</p>
-        <span class="reviewer-name">— Pooja Sharma</span>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Got my bridal makeup done here. It was completely sweat-proof, natural, and not overdone. 4.8 stars are genuinely well deserved!"</p>
-        <span class="reviewer-name">— Anureet Dhillon</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Location & Contact -->
-  <section class="section-wrap" id="contact">
-    <div class="sec-header">
-      <span>Find Us</span>
-      <h2>Visit Damini Beauty Salon</h2>
-    </div>
-    <div class="loc-card">
-      <div class="loc-details">
-        <h3>Contact & Timings</h3>
-        <div class="loc-row">
-          <i class="fa-solid fa-location-dot"></i>
-          <div>
-            <strong>Address:</strong><br>
-            120, Gurjaipal Nagar, Cool Road,<br>
-            Jalandhar, Punjab 144001
-          </div>
-        </div>
-        <div class="loc-row">
-          <i class="fa-solid fa-phone"></i>
-          <div>
-            <strong>Direct Phone:</strong><br>
-            +91 98156 11582
-          </div>
-        </div>
-        <div class="loc-row">
-          <i class="fa-solid fa-clock"></i>
-          <div>
-            <strong>Working Hours:</strong><br>
-            Monday – Sunday: 10:00 AM – 8:00 PM
-          </div>
-        </div>
-        <div style="margin-top: 25px;">
-          <a href="https://wa.me/919815611582?text=Hi,%20I%20want%20to%20inquire%20about%20salon%20appointments." class="btn-primary" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> Chat On WhatsApp
-          </a>
-        </div>
-      </div>
-      <div>
-        <!-- Cool Road Jalandhar Google Map -->
-        <iframe 
-          class="map-embed" 
-          src="https://maps.google.com/maps?q=Cool+Road+Gurjaipal+Nagar+Jalandhar&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sticky Quick Action Bar -->
-  <div class="sticky-bar">
-    <a href="tel:9815611582" class="sticky-btn sticky-call">
-      <i class="fa-solid fa-phone"></i> Call Now
-    </a>
-    <a href="https://wa.me/919815611582?text=Hello%20Damini%20Beauty%20Salon,%20I%20want%20to%20book%20an%20appointment." class="sticky-btn sticky-wa" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i> Book Appointment
-    </a>
-  </div>
-
-</body>
-</html>
+      border: 1px solid
