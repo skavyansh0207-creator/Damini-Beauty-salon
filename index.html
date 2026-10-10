@@ -1,278 +1,607 @@
-```html
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damini Beauty Salon & Nail Studio | Jalandhar</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damini Beauty Salon | Luxury Salon & Spa Jalandhar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0b090a;
+      --card-bg: #161214;
+      --rose-gold: #e2a898;
+      --rose-glow: #f4c2b5;
+      --gold-accent: #d4af37;
+      --text-white: #fdfaf6;
+      --text-muted: #bda8a3;
+      --border-color: rgba(226, 168, 152, 0.2);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text-white);
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      padding-bottom: 70px;
+    }
+    h1, h2, h3, .font-serif {
+      font-family: 'Cormorant Garamond', serif;
+    }
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            100: '#FDF7EB',
-                            200: '#F6E5C2',
-                            300: '#ECCB8C',
-                            400: '#D4AF37',
-                            500: '#C59B27',
-                            600: '#9E7812',
-                        },
-                        rose: {
-                            champagne: '#E0B5B1',
-                            blush: '#C48A85',
-                            dark: '#2A181A'
-                        },
-                        obsidian: {
-                            900: '#0B0A0C',
-                            800: '#141217',
-                            700: '#1F1C24',
-                            600: '#2A2631'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Montserrat"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #F6E5C2 0%, #D4AF37 50%, #ECCB8C 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gold-border-gradient {
-            border-image: linear-gradient(to right, #D4AF37, #E0B5B1, #D4AF37) 1;
-        }
-        .glass-card {
-            background: rgba(26, 23, 30, 0.75);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-        }
-        .glass-nav {
-            background: rgba(11, 10, 12, 0.85);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.12);
-        }
-    </style>
+    /* Top Bar */
+    .top-bar {
+      background: rgba(11, 9, 10, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 20px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .top-bar a {
+      color: var(--rose-gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: radial-gradient(circle at center, rgba(226, 168, 152, 0.15) 0%, rgba(11, 9, 10, 0.95) 75%),
+                  url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    }
+    .badge-rating {
+      background: rgba(22, 18, 20, 0.85);
+      border: 1px solid var(--rose-gold);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 14px;
+      color: var(--rose-glow);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    .hero h1 span {
+      color: var(--rose-gold);
+      font-style: italic;
+    }
+    .hero p {
+      max-width: 650px;
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .hero-btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--rose-gold), #b87363);
+      color: #120a09;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 13px;
+      box-shadow: 0 4px 20px rgba(226, 168, 152, 0.3);
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--rose-gold);
+      color: var(--rose-gold);
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* Section Titles */
+    .section-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 70px 20px;
+    }
+    .sec-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+    .sec-header span {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      color: var(--rose-gold);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .sec-header h2 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    /* Nails Showcase Section */
+    .nails-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .nail-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .nail-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--rose-gold);
+    }
+    .nail-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+    .nail-info {
+      padding: 18px;
+      text-align: center;
+    }
+    .nail-info h4 {
+      font-size: 1.2rem;
+      color: var(--rose-glow);
+      margin-bottom: 5px;
+    }
+    .nail-info p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* All 20+ Services Interactive Menu */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+    .service-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 25px;
+      border-radius: 8px;
+    }
+    .service-box h3 {
+      font-size: 1.6rem;
+      color: var(--rose-gold);
+      border-bottom: 1px dashed var(--border-color);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .service-box h3 i {
+      font-size: 18px;
+    }
+    .srv-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 14px;
+    }
+    .srv-item:last-child {
+      border-bottom: none;
+    }
+    .srv-name {
+      color: var(--text-white);
+      font-weight: 500;
+    }
+    .srv-badge {
+      font-size: 12px;
+      color: var(--rose-gold);
+      background: rgba(226, 168, 152, 0.1);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    /* Reviews Section */
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .review-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 25px;
+      border-radius: 8px;
+    }
+    .review-stars {
+      color: #ffb703;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .review-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    .reviewer-name {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--rose-gold);
+    }
+
+    /* Location & Map Section */
+    .loc-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 30px;
+    }
+    .loc-details h3 {
+      font-size: 2rem;
+      color: var(--rose-glow);
+      margin-bottom: 15px;
+    }
+    .loc-row {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .loc-row i {
+      color: var(--rose-gold);
+      font-size: 18px;
+      margin-top: 3px;
+    }
+    .map-embed {
+      width: 100%;
+      height: 320px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* Bottom Sticky Action Bar */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #110d0f;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      z-index: 999;
+    }
+    .sticky-btn {
+      flex: 1;
+      padding: 14px 0;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .sticky-call {
+      background: #1e1719;
+      color: var(--rose-gold);
+      border-right: 1px solid var(--border-color);
+    }
+    .sticky-wa {
+      background: #25d366;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .section-wrap { padding: 40px 15px; }
+      .loc-card { padding: 20px; }
+    }
+  </style>
 </head>
-<body class="bg-[#0B0A0C] text-gray-200 font-sans antialiased selection:bg-gold-400 selection:text-black">
+<body>
 
-    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full border border-gold-400/40 flex items-center justify-center bg-gradient-to-br from-gold-400/20 to-transparent">
-                    <span class="font-serif font-bold text-xl text-gold-300">D</span>
-                </div>
-                <div>
-                    <a href="#" class="font-serif text-2xl sm:text-3xl font-bold tracking-wider gold-gradient-text">DAMINI</a>
-                    <p class="text-[9px] uppercase tracking-[0.25em] text-gold-300/80 -mt-1 font-medium">Luxury Beauty & Nail Studio</p>
-                </div>
-            </div>
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div><i class="fa-solid fa-location-dot"></i> Gurjaipal Nagar, Cool Road, Jalandhar</div>
+    <div><a href="tel:9815611582"><i class="fa-solid fa-phone"></i> +91 98156 11582</a></div>
+  </div>
 
-            <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium">
-                <a href="#about" class="hover:text-gold-300 transition-colors">About</a>
-                <a href="#services" class="hover:text-gold-300 transition-colors">Services</a>
-                <a href="#nails" class="text-gold-400 hover:text-gold-300 font-semibold transition-colors flex items-center gap-1.5">
-                    <i class="fa-solid fa-sparkles text-[10px]"></i> Nail Studio
-                </a>
-                <a href="#reviews" class="hover:text-gold-300 transition-colors">Reviews</a>
-                <a href="#contact" class="hover:text-gold-300 transition-colors">Contact</a>
-            </nav>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="badge-rating">
+      <i class="fa-solid fa-star" style="color:#ffb703;"></i> 4.8 Rating Over 1,000+ Happy Clients
+    </div>
+    <h1>Damini <span>Beauty Salon</span></h1>
+    <p>Exclusive bridal couture, designer nail extensions, skin aesthetics, and revitalizing spa experiences tailored for discerning women in Jalandhar.</p>
+    <div class="hero-btn-group">
+      <a href="https://wa.me/919815611582?text=Hello%20Damini%20Beauty%20Salon,%20I%20want%20to%20book%20an%20appointment." class="btn-primary" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> Book On WhatsApp
+      </a>
+      <a href="#services" class="btn-secondary">View Menu & Rates</a>
+    </div>
+  </section>
 
-            <!-- Quick Action CTA -->
-            <div class="flex items-center space-x-3">
-                <a href="tel:9815611582" class="hidden sm:inline-flex items-center space-x-2 text-xs font-semibold px-4 py-2.5 rounded-full border border-gold-400/30 text-gold-300 hover:bg-gold-400/10 transition-all">
-                    <i class="fa-solid fa-phone text-xs"></i>
-                    <span>Call Studio</span>
-                </a>
-                <a href="https://wa.me/919815611582?text=Hello%20Damini%20Beauty%20Salon,%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="inline-flex items-center space-x-2 text-xs uppercase tracking-wider font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-400 to-amber-500 text-black shadow-lg shadow-gold-500/20 hover:brightness-110 transition-all">
-                    <i class="fa-brands fa-whatsapp text-sm font-bold"></i>
-                    <span>Book Now</span>
-                </a>
-            </div>
+  <!-- Nails Art & Extensions Showcase (Using Your Provided Photos) -->
+  <section class="section-wrap" id="nails">
+    <div class="sec-header">
+      <span>Exclusive Gallery</span>
+      <h2>Designer Nail Extensions & Art</h2>
+    </div>
+    <div class="nails-grid">
+      <div class="nail-card">
+        <img src="https://i.ibb.co/2775Z8Cz/unnamed-1.webp" alt="Damini Salon Nail Art 1">
+        <div class="nail-info">
+          <h4>Signature Acrylic Sculpting</h4>
+          <p>Custom chrome gloss finish with tailored length.</p>
         </div>
-    </header>
-
-    <section class="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 overflow-hidden">
-        <!-- Ambient Glow -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[550px] bg-rose-dark/30 rounded-full blur-[140px] pointer-events-none"></div>
-        <div class="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-gold-400/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-        <div class="relative max-w-5xl mx-auto text-center z-10">
-            <!-- Rating Badge -->
-            <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full glass-card border border-gold-400/30 mb-8 animate-fade-in">
-                <div class="flex text-amber-400 text-xs">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <span class="text-xs font-semibold tracking-wide text-gray-200">4.8 Rating</span>
-                <span class="text-gray-500">•</span>
-                <span class="text-xs text-gold-200">1,000+ Verified Google Reviews</span>
-            </div>
-
-            <!-- Main Heading -->
-            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.15]">
-                Elevate Your Natural Radiance &amp; <br class="hidden sm:inline">
-                <span class="gold-gradient-text italic font-normal">Couture Nail Artistry</span>
-            </h1>
-
-            <p class="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-400 font-light leading-relaxed mb-10">
-                Jalandhar’s bespoke sanctuary for luxury bridal transformations, rejuvenating skin therapy, and specialized nail extensions designed to turn heads.
-            </p>
-
-            <!-- Hero Action Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/919815611582?text=Hello%20Damini%20Beauty%20Salon,%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 text-xs uppercase tracking-widest font-bold px-8 py-4 rounded-full bg-gradient-to-r from-gold-400 via-amber-400 to-gold-500 text-black shadow-xl shadow-gold-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span>Reserve Appointment</span>
-                </a>
-                <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 text-xs uppercase tracking-widest font-semibold px-8 py-4 rounded-full glass-card border border-gold-400/30 text-gold-200 hover:bg-gold-400/10 transition-all">
-                    <span>Explore Services</span>
-                    <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-
-            <!-- Location Snapshot -->
-            <div class="mt-14 pt-8 border-t border-gold-400/10 flex flex-wrap justify-center items-center gap-6 sm:gap-12 text-xs text-gray-400 font-medium">
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-location-dot text-gold-400"></i>
-                    <span>Cool Road, Gurjaipal Nagar, Jalandhar</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-clock text-gold-400"></i>
-                    <span>Open 7 Days • 10:00 AM - 8:00 PM</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-gem text-gold-400"></i>
-                    <span>Premium Certified Stylists</span>
-                </div>
-            </div>
+      </div>
+      <div class="nail-card">
+        <img src="https://i.ibb.co/xqg4nz48/unnamed.webp" alt="Damini Salon Nail Art 2">
+        <div class="nail-info">
+          <h4>Bridal French & Ombre</h4>
+          <p>Delicate rose blush tones with crystal detailing.</p>
         </div>
-    </section>
-
-    <section id="nails" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-            <span class="text-xs uppercase tracking-[0.3em] font-semibold text-gold-400 block mb-2">Our Signature Craft</span>
-            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-4">The Nail Extension Studio</h2>
-            <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mb-6"></div>
-            <p class="text-gray-400 text-sm sm:text-base font-light">
-                Explore real creations crafted right inside Damini Beauty Salon. From high-gloss French chrome tips to intricate bridal and Swarovski crystal embellishments.
-            </p>
+      </div>
+      <div class="nail-card">
+        <img src="https://i.ibb.co/G4tjvS8V/Screenshot-2026-10-10-14-55-27-509-com-android-chrome-edit.jpg" alt="Damini Salon Nail Extension 3">
+        <div class="nail-info">
+          <h4>Gel Overlay & Precision Art</h4>
+          <p>Long-lasting chip-free natural nail enhancement.</p>
         </div>
-
-        <!-- Nail Images Gallery using Provided Uploads -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Image 1 -->
-            <div class="group relative rounded-2xl overflow-hidden glass-card border border-gold-400/20 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-400/60">
-                <div class="aspect-[4/5] overflow-hidden bg-obsidian-800 relative">
-                    <img src="https://i.ibb.co/2775Z8Cz/unnamed-1.webp" alt="Nail Extension Art Work Damini Salon" class="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700" onerror="this.src='https://placehold.co/600x750/141217/D4AF37?text=Nail+Art+Studio'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5">
-                        <span class="text-[10px] tracking-widest uppercase bg-gold-400 text-black font-bold px-2 py-0.5 rounded">Featured</span>
-                        <h3 class="font-serif text-xl font-bold text-white mt-2">Gel Extension & Chrome Glow</h3>
-                        <p class="text-xs text-gray-300 mt-1">High-shine, long-lasting luxury nail finish</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Image 2 -->
-            <div class="group relative rounded-2xl overflow-hidden glass-card border border-gold-400/20 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-400/60">
-                <div class="aspect-[4/5] overflow-hidden bg-obsidian-800 relative">
-                    <img src="https://i.ibb.co/xqg4nz48/unnamed.webp" alt="Bridal Nail Extensions Damini Salon" class="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700" onerror="this.src='https://placehold.co/600x750/141217/D4AF37?text=Bridal+Nails'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5">
-                        <span class="text-[10px] tracking-widest uppercase bg-gold-400 text-black font-bold px-2 py-0.5 rounded">Bridal</span>
-                        <h3 class="font-serif text-xl font-bold text-white mt-2">Acrylic Sculpted Extensions</h3>
-                        <p class="text-xs text-gray-300 mt-1">Flawless structure tailored for weddings & parties</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Image 3 -->
-            <div class="group relative rounded-2xl overflow-hidden glass-card border border-gold-400/20 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-400/60">
-                <div class="aspect-[4/5] overflow-hidden bg-obsidian-800 relative">
-                    <img src="https://i.ibb.co/G4tjvS8V/Screenshot-2026-10-10-14-55-27-509-com-android-chrome-edit.jpg" alt="Trendy Hand Nail Care and Extension" class="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700" onerror="this.src='https://placehold.co/600x750/141217/D4AF37?text=Trendy+Art'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5">
-                        <span class="text-[10px] tracking-widest uppercase bg-gold-400 text-black font-bold px-2 py-0.5 rounded">Custom Art</span>
-                        <h3 class="font-serif text-xl font-bold text-white mt-2">Bespoke Hand Aesthetics</h3>
-                        <p class="text-xs text-gray-300 mt-1">Ombré tones with premium crystal studs</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Image 4 -->
-            <div class="group relative rounded-2xl overflow-hidden glass-card border border-gold-400/20 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-gold-400/60">
-                <div class="aspect-[4/5] overflow-hidden bg-obsidian-800 relative">
-                    <img src="https://i.ibb.co/7NgT4qK2/Screenshot-2026-10-10-14-54-23-576-com-android-chrome-edit.jpg" alt="Full Glam Nail Artwork Studio" class="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700" onerror="this.src='https://placehold.co/600x750/141217/D4AF37?text=Glam+Studio'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-5">
-                        <span class="text-[10px] tracking-widest uppercase bg-gold-400 text-black font-bold px-2 py-0.5 rounded">Trending</span>
-                        <h3 class="font-serif text-xl font-bold text-white mt-2">Cat-Eye & Gloss Overlay</h3>
-                        <p class="text-xs text-gray-300 mt-1">Luxurious multidimensional shine with cuticle care</p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="nail-card">
+        <img src="https://i.ibb.co/7NgT4qK2/Screenshot-2026-10-10-14-54-23-576-com-android-chrome-edit.jpg" alt="Damini Salon Nail Extension 4">
+        <div class="nail-info">
+          <h4>Luxury Pastel & Nail Glam</h4>
+          <p>Intricate handmade detailing for special events.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="mt-10 text-center">
-            <a href="https://wa.me/919815611582?text=Hello%20Damini%20Beauty%20Salon,%20I%20am%20interested%20in%20booking%20a%20Nail%20Extension%20session" target="_blank" class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest font-semibold px-6 py-3 rounded-full border border-gold-400/40 text-gold-300 hover:bg-gold-400 hover:text-black transition-all">
-                <i class="fa-solid fa-paintbrush"></i>
-                <span>Enquire Nail Extension Rates</span>
-            </a>
+  <!-- All 20+ Services Detailed Menu -->
+  <section class="section-wrap" id="services">
+    <div class="sec-header">
+      <span>Complete Catalog</span>
+      <h2>Signature Services & Aesthetics</h2>
+    </div>
+    <div class="service-grid">
+      
+      <!-- Hair & Styling -->
+      <div class="service-box">
+        <h3>Hair Artistry <i class="fa-solid fa-scissors"></i></h3>
+        <div class="srv-item">
+          <span class="srv-name">Designer Haircut & Styling</span>
+          <span class="srv-badge">Available</span>
         </div>
-    </section>
-
-    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-            <span class="text-xs uppercase tracking-[0.3em] font-semibold text-gold-400 block mb-2">Curated Treatments</span>
-            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-4">Complete Salon &amp; Bridal Menu</h2>
-            <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mb-6"></div>
-            <p class="text-gray-400 text-sm font-light">Choose from our comprehensive selection of skin, bridal, hair couture, and aesthetic treatments.</p>
+        <div class="srv-item">
+          <span class="srv-name">Blow Dry & Volumizing</span>
+          <span class="srv-badge">Instant</span>
         </div>
-
-        <!-- Service Category Tabs -->
-        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
-            <button onclick="filterServices('all')" class="tab-btn active px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all bg-gold-400 text-black" data-tab="all">All Services</button>
-            <button onclick="filterServices('hair')" class="tab-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all glass-card border border-gold-400/20 text-gray-300 hover:text-gold-300" data-tab="hair">Hair Couture</button>
-            <button onclick="filterServices('bridal')" class="tab-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all glass-card border border-gold-400/20 text-gray-300 hover:text-gold-300" data-tab="bridal">Bridal & Makeup</button>
-            <button onclick="filterServices('skin')" class="tab-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all glass-card border border-gold-400/20 text-gray-300 hover:text-gold-300" data-tab="skin">Facial & Spa</button>
-            <button onclick="filterServices('nails')" class="tab-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all glass-card border border-gold-400/20 text-gray-300 hover:text-gold-300" data-tab="nails">Nails & Feet</button>
-            <button onclick="filterServices('wax')" class="tab-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all glass-card border border-gold-400/20 text-gray-300 hover:text-gold-300" data-tab="wax">Waxing & Body</button>
+        <div class="srv-item">
+          <span class="srv-name">Luxury Hair Extensions</span>
+          <span class="srv-badge">Custom</span>
         </div>
+        <div class="srv-item">
+          <span class="srv-name">Shampoo & Deep Conditioning</span>
+          <span class="srv-badge">Available</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Keratin & Protein Spa Therapy</span>
+          <span class="srv-badge">Premium</span>
+        </div>
+      </div>
 
-        <!-- Service Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="services-grid">
-            
-            <!-- Hair 1 -->
-            <div class="service-card hair glass-card rounded-2xl p-6 border border-gold-400/15 hover:border-gold-400/50 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-gold-400/10 flex items-center justify-center text-gold-400 mb-5">
-                        <i class="fa-solid fa-scissors text-xl"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-white mb-2">Haircut & Signature Blow Dry</h3>
-                    <p class="text-gray-400 text-xs sm:text-sm font-light mb-4">Precision styling tailored to your face structure, finished with our signature voluminous blow dry and thermal polish.</p>
-                </div>
-                <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-                    <span class="text-xs text-gold-300 font-medium">Custom Consultation</span>
-                    <a href="https://wa.me/919815611582?text=Hello%20Damini%20Salon,%20I%20want%20to%20book%20Haircut%20and%20Blow%20Dry" target="_blank" class="text-xs font-semibold text-white hover:text-gold-400 flex items-center gap-1">
-                        Book <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-           
+      <!-- Make-Up & Bridal -->
+      <div class="service-box">
+        <h3>Bridal & Events <i class="fa-solid fa-crown"></i></h3>
+        <div class="srv-item">
+          <span class="srv-name">HD / Airbrush Bridal Make-up</span>
+          <span class="srv-badge">Specialist</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Wedding & Event Preparation</span>
+          <span class="srv-badge">Package</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Party & Reception Make-up</span>
+          <span class="srv-badge">Available</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Dramatic Eyelashes Setting</span>
+          <span class="srv-badge">Add-on</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Eyebrow Threading & Shaping</span>
+          <span class="srv-badge">Express</span>
+        </div>
+      </div>
+
+      <!-- Skin & Spa Services -->
+      <div class="service-box">
+        <h3>Skin & Rejuvenation <i class="fa-solid fa-spa"></i></h3>
+        <div class="srv-item">
+          <span class="srv-name">Medical & Glow Facials</span>
+          <span class="srv-badge">Radiance</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Full Body Waxing / Rica</span>
+          <span class="srv-badge">Smooth</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Aroma Body Massage & Spa</span>
+          <span class="srv-badge">Therapy</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Body Tanning & Polishing</span>
+          <span class="srv-badge">Flawless</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Advanced Skin Care Rituals</span>
+          <span class="srv-badge">Custom</span>
+        </div>
+      </div>
+
+      <!-- Hands & Feet Care -->
+      <div class="service-box">
+        <h3>Manicure & Pedicure <i class="fa-solid fa-hand-sparkles"></i></h3>
+        <div class="srv-item">
+          <span class="srv-name">Classic & Spa Manicure</span>
+          <span class="srv-badge">Deluxe</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Hydrating Rose Pedicure</span>
+          <span class="srv-badge">Deluxe</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Cuticle Care & Nail Buffing</span>
+          <span class="srv-badge">Essential</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">Online Beauty Salon Booking</span>
+          <span class="srv-badge">Instant</span>
+        </div>
+        <div class="srv-item">
+          <span class="srv-name">VIP Membership Salon Services</span>
+          <span class="srv-badge">Inquire</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google Reviews -->
+  <section class="section-wrap">
+    <div class="sec-header">
+      <span>Verified Feedback</span>
+      <h2>What Jalandhar Says About Us</h2>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best nail extension service in Cool Road! Got my bridal nails done from Damini Salon and they stayed immaculate for more than 4 weeks. Highly recommended!"</p>
+        <span class="reviewer-name">— Simran Kaur (Jalandhar)</span>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The facial and hair spa gave an instant natural glow. The ambience is clean, very hygienic and the staff is completely professional."</p>
+        <span class="reviewer-name">— Pooja Sharma</span>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Got my bridal makeup done here. It was completely sweat-proof, natural, and not overdone. 4.8 stars are genuinely well deserved!"</p>
+        <span class="reviewer-name">— Anureet Dhillon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact -->
+  <section class="section-wrap" id="contact">
+    <div class="sec-header">
+      <span>Find Us</span>
+      <h2>Visit Damini Beauty Salon</h2>
+    </div>
+    <div class="loc-card">
+      <div class="loc-details">
+        <h3>Contact & Timings</h3>
+        <div class="loc-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Address:</strong><br>
+            120, Gurjaipal Nagar, Cool Road,<br>
+            Jalandhar, Punjab 144001
+          </div>
+        </div>
+        <div class="loc-row">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <strong>Direct Phone:</strong><br>
+            +91 98156 11582
+          </div>
+        </div>
+        <div class="loc-row">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <strong>Working Hours:</strong><br>
+            Monday – Sunday: 10:00 AM – 8:00 PM
+          </div>
+        </div>
+        <div style="margin-top: 25px;">
+          <a href="https://wa.me/919815611582?text=Hi,%20I%20want%20to%20inquire%20about%20salon%20appointments." class="btn-primary" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Chat On WhatsApp
+          </a>
+        </div>
+      </div>
+      <div>
+        <!-- Cool Road Jalandhar Google Map -->
+        <iframe 
+          class="map-embed" 
+          src="https://maps.google.com/maps?q=Cool+Road+Gurjaipal+Nagar+Jalandhar&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Quick Action Bar -->
+  <div class="sticky-bar">
+    <a href="tel:9815611582" class="sticky-btn sticky-call">
+      <i class="fa-solid fa-phone"></i> Call Now
+    </a>
+    <a href="https://wa.me/919815611582?text=Hello%20Damini%20Beauty%20Salon,%20I%20want%20to%20book%20an%20appointment." class="sticky-btn sticky-wa" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Book Appointment
+    </a>
+  </div>
+
+</body>
+</html>
